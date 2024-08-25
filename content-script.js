@@ -1,5 +1,53 @@
+console.log('sd');
+const SETTINGS = {};
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        // Kod, który ma się wykonać po załadowaniu DOM
+        init();
+    });
+} else {
+    // DOM jest już załadowany
+    init();
+}
+
 // Przykładowy skrypt modyfikujący interfejs Allegro
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
+    getStorageValues(() => {
+        overwriteSellerNameWithLink();
+    });
+}
+
+function getStorageValues(callback) {
+    chrome.storage.sync.get(null, (result) => {
+        if (chrome.runtime.lastError) {
+            return reject(chrome.runtime.lastError);
+        }
+        Object.assign(SETTINGS, result);
+
+        callback();
+    });
+}
+
+function overwriteSellerNameWithLink() {
+    if (!SETTINGS.overwriteSellerNameWithLink) {
+        return;
+    }
+
+
+    const textDiv = getSellerInfoTextSection();
+    const sellerNameDiv = getSellerNameDiv();
+    const textDivNodes = [...textDiv.childNodes];
+    const last = textDivNodes.at(-1);
+    last.remove();
+
+    const sellerName = getSellerName();
+    const sellerUrl = getSellerUrl();
+    textDiv.appendChild(makeSellerLink(sellerName, sellerUrl));
+    sellerNameDiv.innerHTML = '';
+    sellerNameDiv.appendChild(makeSellerLink(sellerName, sellerUrl));
+}
+
+function getSellerInfoTextSection() {
     const sellerInfoHeader = document.querySelector('[data-box-name="showoffer.sellerInfoHeader"]');
     const appContainer = sellerInfoHeader?.querySelector('[data-role="app-container"]');
     const textDiv = appContainer.querySelector('div')
@@ -7,21 +55,33 @@ document.addEventListener('DOMContentLoaded', () => {
         .querySelector('div')
         .querySelector('div');
 
-    if (!appContainer) {
-        return;
-    }
+    return textDiv;
+}
 
+function getSellerNameDiv() {
+    return document.querySelector('[data-analytics-view-label="nonFulfilment"]')
+        ?.querySelector('div')
+        ?.querySelector('div')
+        ?.querySelector('div');
+}
+
+function getSellerName() {
+    return getSellerNameDiv()?.innerText || '';
+}
+
+function getSellerUrl() {
     const linkSellerProfile = document.querySelector('[data-analytics-interaction-label="allSellersItemsLink"]');
-    const linkUrl = linkSellerProfile.getAttribute('href');
+    return linkSellerProfile.getAttribute('href');
+}
 
-
-    const text = textDiv.innerText;
+function makeSellerLink(text, url) {
     const newElement = document.createElement('a');
     newElement.textContent = text;
-    newElement.href = linkUrl;
-    newElement.style.color = '#ff5a00';
-    const textDivNodes = [...textDiv.childNodes];
-    textDivNodes[textDivNodes.length - 1].remove();
-    textDiv.appendChild(newElement);
-
-});
+    newElement.href = url;
+    newElement.style.color = SETTINGS.sellerLinkColor;
+    newElement.style.textDecoration = 'none';
+    if (SETTINGS.openSellerLinkInNewTab) {
+        newElement.target = '_blank';
+    }
+    return newElement;
+}

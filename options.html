@@ -1,24 +1,102 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Opcje Allegro Flex</title>
   <style>
       body {
           font-family: Arial, sans-serif;
-          padding: 10px;
+          background-color: #f4f4f9;
+          margin: 0;
+          padding: 20px;
       }
-      label, input {
+
+      .container {
+          max-width: 500px;
+          margin: auto;
+          background: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+          text-align: center;
+          color: #333;
+      }
+
+      .form-group {
+          margin-bottom: 15px;
+      }
+
+      label {
           display: block;
-          margin-bottom: 10px;
+          font-weight: bold;
+          margin-bottom: 5px;
+          color: #555;
+      }
+
+      input[type="checkbox"] {
+          margin-right: 10px;
+      }
+
+      input[type="color"] {
+          width: 100%;
+          height: 40px;
+          padding: 5px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+      }
+
+      button {
+          width: 100%;
+          padding: 10px;
+          background-color: #007bff;
+          border: none;
+          border-radius: 4px;
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+      }
+
+      button:hover {
+          background-color: #0056b3;
+      }
+
+      #status {
+          margin-top: 15px;
+          text-align: center;
+          font-size: 14px;
+          color: green;
       }
   </style>
 </head>
 <body>
-<h2>Opcje Allegro Flex</h2>
-<form>
-  <label for="color">Kolor nagłówka:</label>
-  <input type="color" id="color" name="color" value="#ff9900">
-  <button type="submit">Zapisz</button>
-</form>
+<div class="container">
+  <h2>Opcje Allegro Flex</h2>
+  <form id="optionsForm">
+    <div class="form-group">
+      <label for="overwriteSellerNameWithLink">
+        <input type="checkbox" id="overwriteSellerNameWithLink" name="overwriteSellerNameWithLink">
+        Linkuj nazwę sprzedawcy
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="sellerLinkColor">Kolor linku</label>
+      <input type="color" id="sellerLinkColor" name="sellerLinkColor" value="#007bff">
+    </div>
+    <div class="form-group">
+      <label for="openSellerLinkInNewTab">
+        <input type="checkbox" id="openSellerLinkInNewTab" name="openSellerLinkInNewTab">
+        Otwieraj w nowej karcie
+      </label>
+    </div>
+    <button type="submit">Zapisz ustawienia</button>
+  </form>
+  <p id="status"></p>
+</div>
+<script src="options.js"></script>
 </body>
 </html>
