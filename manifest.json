@@ -17,7 +17,6 @@
     {
       "matches": ["*://allegro.pl/*"],
       "js": ["content-script.js"],
-      "css": ["styles.css"]
     }
   ],
   "action": {
