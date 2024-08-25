@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Allegro Flex",
+  "version": "1.0",
+  "description": "Dostosuj układ Allegro, aby najważniejsze elementy były bardziej dostępne.",
+  "icons": {
+    "16": "images/icon.svg",
+    "48": "images/icon.svg",
+    "128": "images/icon.svg"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://allegro.pl/*"],
+      "js": ["content-script.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "images/icon.svg",
+      "48": "images/icon.svg",
+      "128": "images/icon.svg"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html"
+}
