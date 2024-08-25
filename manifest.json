@@ -4,9 +4,9 @@
   "version": "1.0",
   "description": "Dostosuj układ Allegro, aby najważniejsze elementy były bardziej dostępne.",
   "icons": {
-    "16": "images/icon.svg",
-    "48": "images/icon.svg",
-    "128": "images/icon.svg"
+    "16": "images/flex.png",
+    "48": "images/flex.png",
+    "128": "images/flex.png"
   },
   "permissions": [
     "activeTab",
@@ -21,9 +21,9 @@
   ],
   "action": {
     "default_icon": {
-      "16": "images/icon.svg",
-      "48": "images/icon.svg",
-      "128": "images/icon.svg"
+      "16": "images/flex.png",
+      "48": "images/flex.png",
+      "128": "images/flex.png"
     }
   },
   "background": {
