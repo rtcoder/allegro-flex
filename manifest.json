@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["*://allegro.pl/*"],
-      "js": ["content-script.js"],
+      "js": ["content-script.js"]
     }
   ],
   "action": {
