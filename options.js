@@ -1,14 +1,50 @@
-// Funkcja zapisująca ustawienia
-function saveOptions() {
-    const overwriteSellerNameWithLink = document.getElementById('overwriteSellerNameWithLink').checked;
-    const sellerLinkColor = document.getElementById('sellerLinkColor').value;
-    const openSellerLinkInNewTab = document.getElementById('openSellerLinkInNewTab').checked;
+const defaultSettings = {
+    overwriteSellerNameWithLink: false,
+    sellerLinkColor: '#ff5a00',
+    openSellerLinkInNewTab: false,
+    wrapThumbnails: false,
+};
 
-    chrome.storage.sync.set({
-        overwriteSellerNameWithLink: overwriteSellerNameWithLink,
-        sellerLinkColor: sellerLinkColor,
-        openSellerLinkInNewTab: openSellerLinkInNewTab,
-    }, () => {
+function getValue(id) {
+    const element = document.getElementById(id);
+    if (!element) {
+        return null;
+    }
+    if (element.getAttribute('type') === 'checkbox') {
+        return element.checked;
+    }
+    return element.value;
+}
+
+function setValue(id, value) {
+    const element = document.getElementById(id);
+    if (!element) {
+        return;
+    }
+    if (element.getAttribute('type') === 'checkbox') {
+        element.checked = value;
+        return;
+    }
+    element.value = value;
+}
+
+function composeDataToSave() {
+    const dataToSave = {};
+    Object.keys(dataToSave).forEach(key => {
+        dataToSave[key] = getValue(key);
+    });
+
+    return dataToSave;
+}
+
+function fillFormWithData(data) {
+    Object.keys(data).forEach(key => {
+        setValue(key, data[key]);
+    });
+}
+
+function saveOptions() {
+    chrome.storage.sync.set(composeDataToSave(), () => {
         const status = document.getElementById('status');
         status.textContent = 'Ustawienia zapisane!';
         setTimeout(() => {
@@ -18,15 +54,7 @@ function saveOptions() {
 }
 
 function restoreOptions() {
-    chrome.storage.sync.get({
-        overwriteSellerNameWithLink: false,
-        sellerLinkColor: '#ff5a00',
-        openSellerLinkInNewTab: false,
-    }, (items) => {
-        document.getElementById('overwriteSellerNameWithLink').checked = items.overwriteSellerNameWithLink;
-        document.getElementById('sellerLinkColor').value = items.sellerLinkColor;
-        document.getElementById('openSellerLinkInNewTab').checked = items.openSellerLinkInNewTab;
-    });
+    chrome.storage.sync.get(defaultSettings, fillFormWithData);
 }
 
 document.getElementById('optionsForm').addEventListener('submit', (event) => {
@@ -35,3 +63,12 @@ document.getElementById('optionsForm').addEventListener('submit', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
+
+document.getElementById('optionsForm').addEventListener('click',e=>{
+    const {target} = e;
+    if(!target.matches('.form-group-section h3')){
+        return;
+    }
+
+    target.parentElement.classList.toggle('open')
+})
