@@ -1,16 +1,13 @@
-console.log('sd');
 const SETTINGS = {};
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        // Kod, który ma się wykonać po załadowaniu DOM
         init();
     });
 } else {
-    // DOM jest już załadowany
     init();
 }
 
-// Przykładowy skrypt modyfikujący interfejs Allegro
 function init() {
     getStorageValues(() => {
         overwriteSellerNameWithLink();

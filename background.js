@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
-    console.log('Allegro Flex został zainstalowany!');
+    chrome.runtime.openOptionsPage();
 });
 chrome.action.onClicked.addListener(() => {
     chrome.runtime.openOptionsPage();

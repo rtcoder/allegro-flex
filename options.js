@@ -9,7 +9,6 @@ function saveOptions() {
         sellerLinkColor: sellerLinkColor,
         openSellerLinkInNewTab: openSellerLinkInNewTab,
     }, () => {
-        // Wyświetl komunikat o sukcesie
         const status = document.getElementById('status');
         status.textContent = 'Ustawienia zapisane!';
         setTimeout(() => {
@@ -18,7 +17,6 @@ function saveOptions() {
     });
 }
 
-// Funkcja przywracająca zapisane ustawienia
 function restoreOptions() {
     chrome.storage.sync.get({
         overwriteSellerNameWithLink: false,
@@ -31,11 +29,9 @@ function restoreOptions() {
     });
 }
 
-// Nasłuchiwanie na zdarzenie zapisania formularza
 document.getElementById('optionsForm').addEventListener('submit', (event) => {
     event.preventDefault();  // Zatrzymaj domyślne działanie formularza
     saveOptions();
 });
 
-// Przywróć ustawienia po załadowaniu dokumentu
 document.addEventListener('DOMContentLoaded', restoreOptions);
