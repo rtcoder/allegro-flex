@@ -1,0 +1,35 @@
+{
+  "extensionName": {
+    "message": "Allegro Flex"
+  },
+  "extensionDescription": {
+    "message": "Dostosuj układ Allegro, aby najważniejsze elementy były bardziej dostępne."
+  },
+  "optionsTitle": {
+    "message": "Opcje Allegro Flex"
+  },
+  "sellerName": {
+    "message": "Nazwa sprzedawcy"
+  },
+  "linkSellerName": {
+    "message": "Linkuj nazwę sprzedawcy"
+  },
+  "linkColor": {
+    "message": "Kolor linku"
+  },
+  "openInNewTab": {
+    "message": "Otwieraj w nowej karcie"
+  },
+  "thumbnails": {
+    "message": "Miniaturki"
+  },
+  "wrapThumbnails": {
+    "message": "Zawijaj miniaturki"
+  },
+  "saveSettings": {
+    "message": "Zapisz ustawienia"
+  },
+  "settingSaved": {
+    "message": "Ustawienia zapisane!"
+  }
+}

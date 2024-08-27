@@ -3,60 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opcje Allegro Flex</title>
+  <title data-i18n="optionsTitle">Opcje Allegro Flex</title>
   <link rel="stylesheet" href="/css/options.css">
 </head>
 <body>
 <div class="container">
-  <h2>Opcje Allegro Flex</h2>
+  <h2 data-i18n="optionsTitle">Opcje Allegro Flex</h2>
 
   <form id="optionsForm">
     <div class="form-fields">
 
       <div class="form-group-section">
-        <h3>Nazwa sprzedawcy</h3>
+        <h3 data-i18n="sellerName">Nazwa sprzedawcy</h3>
 
         <div class="form-group-section-content">
           <div class="form-group">
             <label for="overwriteSellerNameWithLink">
               <input type="checkbox" id="overwriteSellerNameWithLink" name="overwriteSellerNameWithLink">
-              Linkuj nazwę sprzedawcy
+              <span data-i18n="linkSellerName">Linkuj nazwę sprzedawcy</span>
             </label>
           </div>
 
           <div class="form-group">
             <label for="sellerLinkColor">
               <input type="color" id="sellerLinkColor" name="sellerLinkColor" value="#007bff">
-              Kolor linku
+              <span data-i18n="linkColor">Kolor linku</span>
             </label>
           </div>
 
           <div class="form-group">
             <label for="openSellerLinkInNewTab">
               <input type="checkbox" id="openSellerLinkInNewTab" name="openSellerLinkInNewTab">
-              Otwieraj w nowej karcie
+              <span data-i18n="openInNewTab">Otwieraj w nowej karcie</span>
             </label>
           </div>
         </div>
       </div>
 
       <div class="form-group-section">
-        <h3>Miniaturki</h3>
+        <h3 data-i18n="thumbnails">Miniaturki</h3>
 
         <div class="form-group-section-content">
           <div class="form-group">
             <label for="wrapThumbnails">
               <input type="checkbox" id="wrapThumbnails" name="wrapThumbnails">
-              Zawijaj miniaturki
+              <span data-i18n="wrapThumbnails">Zawijaj miniaturki</span>
             </label>
           </div>
         </div>
       </div>
     </div>
 
-    <button type="submit">Zapisz ustawienia</button>
+    <button type="submit" data-i18n="saveSettings">Zapisz ustawienia</button>
   </form>
-  <p id="status"></p>
+  <p id="status" data-i18n="settingSaved">Ustawienia zapisane!</p>
 </div>
 <script src="/js/options.js"></script>
 </body>

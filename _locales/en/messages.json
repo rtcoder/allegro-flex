@@ -1,0 +1,35 @@
+{
+  "extensionName": {
+    "message": "Allegro Flex"
+  },
+  "extensionDescription": {
+    "message": "Customize the Allegro layout to make key elements more accessible."
+  },
+  "optionsTitle": {
+    "message": "Allegro Flex Options"
+  },
+  "sellerName": {
+    "message": "Seller Name"
+  },
+  "linkSellerName": {
+    "message": "Link seller name"
+  },
+  "linkColor": {
+    "message": "Link color"
+  },
+  "openInNewTab": {
+    "message": "Open in new tab"
+  },
+  "thumbnails": {
+    "message": "Thumbnails"
+  },
+  "wrapThumbnails": {
+    "message": "Wrap thumbnails"
+  },
+  "saveSettings": {
+    "message": "Save settings"
+  },
+  "settingSaved": {
+    "message": "Settings saved!"
+  }
+}

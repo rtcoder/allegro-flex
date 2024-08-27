@@ -112,6 +112,7 @@ button:hover {
     text-align: center;
     font-size: 14px;
     color: green;
+    display: none;
 }
 
 .form-fields {

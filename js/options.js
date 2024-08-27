@@ -46,9 +46,9 @@ function fillFormWithData(data) {
 function saveOptions() {
     chrome.storage.sync.set(composeDataToSave(), () => {
         const status = document.getElementById('status');
-        status.textContent = 'Ustawienia zapisane!';
+        status.style.display = 'block';
         setTimeout(() => {
-            status.textContent = '';
+            status.style.removeProperty('display')
         }, 2000);
     });
 }
@@ -71,4 +71,9 @@ document.getElementById('optionsForm').addEventListener('click', e => {
     }
 
     target.parentElement.classList.toggle('open');
+});
+
+document.querySelectorAll('[data-i18n]').forEach(element => {
+    const messageKey = element.getAttribute('data-i18n');
+    element.textContent = chrome.i18n.getMessage(messageKey);
 });

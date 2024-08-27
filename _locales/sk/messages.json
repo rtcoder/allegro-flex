@@ -1,0 +1,35 @@
+{
+  "extensionName": {
+    "message": "Allegro Flex"
+  },
+  "extensionDescription": {
+    "message": "Prispôsobte rozloženie Allegro, aby boli kľúčové prvky dostupnejšie."
+  },
+  "optionsTitle": {
+    "message": "Možnosti Allegro Flex"
+  },
+  "sellerName": {
+    "message": "Názov predajcu"
+  },
+  "linkSellerName": {
+    "message": "Odkaz na názov predajcu"
+  },
+  "linkColor": {
+    "message": "Farba odkazu"
+  },
+  "openInNewTab": {
+    "message": "Otvoriť na novej karte"
+  },
+  "thumbnails": {
+    "message": "Miniatúry"
+  },
+  "wrapThumbnails": {
+    "message": "Zabaliť miniatúry"
+  },
+  "saveSettings": {
+    "message": "Uložiť nastavenia"
+  },
+  "settingSaved": {
+    "message": "Nastavenia uložené!"
+  }
+}

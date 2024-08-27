@@ -1,0 +1,35 @@
+{
+  "extensionName": {
+    "message": "Allegro Flex"
+  },
+  "extensionDescription": {
+    "message": "Налаштуйте макет Allegro, щоб важливі елементи стали більш доступними."
+  },
+  "optionsTitle": {
+    "message": "Налаштування Allegro Flex"
+  },
+  "sellerName": {
+    "message": "Назва продавця"
+  },
+  "linkSellerName": {
+    "message": "Посилання на назву продавця"
+  },
+  "linkColor": {
+    "message": "Колір посилання"
+  },
+  "openInNewTab": {
+    "message": "Відкривати в новій вкладці"
+  },
+  "thumbnails": {
+    "message": "Мініатюри"
+  },
+  "wrapThumbnails": {
+    "message": "Загортати мініатюри"
+  },
+  "saveSettings": {
+    "message": "Зберегти налаштування"
+  },
+  "settingSaved": {
+    "message": "Налаштування збережено!"
+  }
+}
