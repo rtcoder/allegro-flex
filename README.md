@@ -41,7 +41,7 @@ This extension requires the following permissions:
 - **activeTab**: To interact with the current tab and modify Allegro's content.
 - **storage**: To save and retrieve user preferences.
 - **scripting**: To inject scripts that customize the webpage.
-- **Host Permissions**: Specifically for `https://allegro.pl/*` to modify its content.
+- **Host Permissions**: Specifically for `https://allegro.com/*`, `https://allegro.pl/*`, `https://allegro.cs/*`, `https://allegro.sk/*` to modify its content.
 
 ## Development
 
