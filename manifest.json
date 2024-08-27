@@ -15,8 +15,19 @@
   ],
   "content_scripts": [
     {
-      "matches": ["*://allegro.pl/*"],
-      "js": ["content-script.js"]
+      "matches": [
+        "*://allegro.com/*",
+        "*://allegro.pl/*",
+        "*://allegro.sk/*",
+        "*://allegro.cz/*"
+      ],
+      "js": [
+        "/js/utils.js",
+        "/js/seller-name.js",
+        "/js/wrap-thumbnails.js",
+        "/js/content-script.js"
+      ],
+      "type": "module"
     }
   ],
   "action": {
@@ -27,7 +38,7 @@
     }
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "/js/background.js"
   },
   "options_page": "options.html"
 }

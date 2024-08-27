@@ -30,7 +30,7 @@ function setValue(id, value) {
 
 function composeDataToSave() {
     const dataToSave = {};
-    Object.keys(dataToSave).forEach(key => {
+    Object.keys(defaultSettings).forEach(key => {
         dataToSave[key] = getValue(key);
     });
 
@@ -58,17 +58,17 @@ function restoreOptions() {
 }
 
 document.getElementById('optionsForm').addEventListener('submit', (event) => {
-    event.preventDefault();  // Zatrzymaj domyślne działanie formularza
+    event.preventDefault();
     saveOptions();
 });
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
 
-document.getElementById('optionsForm').addEventListener('click',e=>{
+document.getElementById('optionsForm').addEventListener('click', e => {
     const {target} = e;
-    if(!target.matches('.form-group-section h3')){
+    if (!target.matches('.form-group-section h3')) {
         return;
     }
 
-    target.parentElement.classList.toggle('open')
-})
+    target.parentElement.classList.toggle('open');
+});

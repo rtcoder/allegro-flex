@@ -1,32 +1,7 @@
-const SETTINGS = {};
+ async function overwriteSellerNameWithLink() {
+    const settings = await getStorageValues(['overwriteSellerNameWithLink']);
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        init();
-    });
-} else {
-    init();
-}
-
-function init() {
-    getStorageValues(() => {
-        overwriteSellerNameWithLink();
-    });
-}
-
-function getStorageValues(callback) {
-    chrome.storage.sync.get(null, (result) => {
-        if (chrome.runtime.lastError) {
-            return reject(chrome.runtime.lastError);
-        }
-        Object.assign(SETTINGS, result);
-
-        callback();
-    });
-}
-
-function overwriteSellerNameWithLink() {
-    if (!SETTINGS.overwriteSellerNameWithLink) {
+    if (!settings.overwriteSellerNameWithLink) {
         return;
     }
 
@@ -39,9 +14,9 @@ function overwriteSellerNameWithLink() {
 
     const sellerName = getSellerName();
     const sellerUrl = getSellerUrl();
-    textDiv.appendChild(makeSellerLink(sellerName, sellerUrl));
+    textDiv.appendChild(await makeSellerLink(sellerName, sellerUrl));
     sellerNameDiv.innerHTML = '';
-    sellerNameDiv.appendChild(makeSellerLink(sellerName, sellerUrl));
+    sellerNameDiv.appendChild(await makeSellerLink(sellerName, sellerUrl));
 }
 
 function getSellerInfoTextSection() {
@@ -71,13 +46,14 @@ function getSellerUrl() {
     return linkSellerProfile.getAttribute('href');
 }
 
-function makeSellerLink(text, url) {
+async function makeSellerLink(text, url) {
+    const settings = await getStorageValues(['sellerLinkColor', 'openSellerLinkInNewTab']);
     const newElement = document.createElement('a');
     newElement.textContent = text;
     newElement.href = url;
-    newElement.style.color = SETTINGS.sellerLinkColor;
+    newElement.style.color = settings.sellerLinkColor;
     newElement.style.textDecoration = 'none';
-    if (SETTINGS.openSellerLinkInNewTab) {
+    if (settings.openSellerLinkInNewTab) {
         newElement.target = '_blank';
     }
     return newElement;
