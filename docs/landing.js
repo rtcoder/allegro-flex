@@ -46,8 +46,7 @@ const translations = {
     experienceText: "The extension uses preferences saved in your browser. Enable the features you want, choose a color, and refresh the offer page to see the result.",
     privacyEyebrow: "Privacy",
     privacyTitle: "A minimal operating scope.",
-    privacyTextBefore: "Allegro Flex runs on Allegro pages defined in the manifest and saves settings through the",
-    privacyTextAfter: "API. The code is local, readable, and easy to inspect before loading the extension.",
+    privacyText: "Allegro Flex does not collect, sell, or send any user data. It only saves your extension preferences in the browser, so your settings can stay active between visits.",
   },
   pl: {
     documentTitle: "Allegro Flex - wygodniejsze karty ofert Allegro",
@@ -94,8 +93,7 @@ const translations = {
     experienceText: "Rozszerzenie korzysta z zapisanych preferencji przeglądarki. Włącz wybrane funkcje, wybierz kolor i odśwież kartę oferty, aby zobaczyć efekt.",
     privacyEyebrow: "Prywatność",
     privacyTitle: "Minimalny zakres działania.",
-    privacyTextBefore: "Allegro Flex działa na stronach Allegro zdefiniowanych w pliku manifestu i zapisuje ustawienia przez API",
-    privacyTextAfter: ". Kod jest lokalny, czytelny i łatwy do sprawdzenia przed załadowaniem rozszerzenia.",
+    privacyText: "Allegro Flex nie zbiera, nie sprzedaje ani nie wysyła żadnych danych użytkownika. Zapisuje tylko preferencje dodatku w przeglądarce, żeby ustawienia działały między kolejnymi wizytami.",
   },
   cs: {
     documentTitle: "Allegro Flex - pohodlnější stránky nabídek Allegro",
@@ -142,8 +140,7 @@ const translations = {
     experienceText: "Rozšíření používá předvolby uložené v prohlížeči. Zapněte požadované funkce, vyberte barvu a obnovte stránku nabídky.",
     privacyEyebrow: "Soukromí",
     privacyTitle: "Minimální rozsah fungování.",
-    privacyTextBefore: "Allegro Flex běží na stránkách Allegro definovaných v manifestu a ukládá nastavení přes API",
-    privacyTextAfter: ". Kód je lokální, čitelný a snadno zkontrolovatelný před načtením rozšíření.",
+    privacyText: "Allegro Flex neshromažďuje, neprodává ani neodesílá žádná uživatelská data. Ukládá pouze předvolby rozšíření v prohlížeči, aby nastavení zůstala aktivní mezi návštěvami.",
   },
   sk: {
     documentTitle: "Allegro Flex - pohodlnejšie stránky ponúk Allegro",
@@ -190,8 +187,7 @@ const translations = {
     experienceText: "Rozšírenie používa predvoľby uložené v prehliadači. Zapnite požadované funkcie, vyberte farbu a obnovte stránku ponuky.",
     privacyEyebrow: "Súkromie",
     privacyTitle: "Minimálny rozsah fungovania.",
-    privacyTextBefore: "Allegro Flex beží na stránkach Allegro definovaných v manifeste a ukladá nastavenia cez API",
-    privacyTextAfter: ". Kód je lokálny, čitateľný a ľahko skontrolovateľný pred načítaním rozšírenia.",
+    privacyText: "Allegro Flex nezhromažďuje, nepredáva ani neodosiela žiadne údaje používateľa. Ukladá iba predvoľby rozšírenia v prehliadači, aby nastavenia zostali aktívne medzi návštevami.",
   },
   uk: {
     documentTitle: "Allegro Flex - зручніші сторінки пропозицій Allegro",
@@ -238,8 +234,7 @@ const translations = {
     experienceText: "Розширення використовує параметри, збережені у браузері. Увімкніть потрібні функції, виберіть колір і оновіть сторінку пропозиції.",
     privacyEyebrow: "Приватність",
     privacyTitle: "Мінімальна область роботи.",
-    privacyTextBefore: "Allegro Flex працює на сторінках Allegro, визначених у маніфесті, і зберігає налаштування через API",
-    privacyTextAfter: ". Код локальний, читабельний і його легко перевірити перед завантаженням розширення.",
+    privacyText: "Allegro Flex не збирає, не продає і не надсилає жодних даних користувача. Він лише зберігає параметри розширення у браузері, щоб налаштування залишалися активними між відвідуваннями.",
   }
 };
 
