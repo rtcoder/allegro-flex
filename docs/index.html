@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Allegro Flex to rozszerzenie Chrome, które porządkuje karty ofert Allegro: linkuje sprzedawcę, ustawia kolor linków i zawija miniaturki galerii.">
+  <title>Allegro Flex - wygodniejsze karty ofert Allegro</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="Allegro Flex">
+    <img src="../images/flex.png" alt="" width="36" height="36">
+    <span>Allegro Flex</span>
+  </a>
+  <nav class="top-nav" aria-label="Nawigacja">
+    <a href="#features">Funkcje</a>
+    <a href="#install">Instalacja</a>
+    <a href="#privacy">Prywatność</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-backdrop" aria-hidden="true">
+      <div class="market-window">
+        <div class="window-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="offer-layout">
+          <div class="gallery-preview">
+            <div class="main-image"></div>
+            <div class="thumb-grid">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="offer-copy">
+            <div class="line wide"></div>
+            <div class="line medium"></div>
+            <div class="seller-row">
+              <span class="seller-dot"></span>
+              <span>SuperSprzedawca</span>
+            </div>
+            <div class="price-line"></div>
+            <div class="action-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <p class="eyebrow">Rozszerzenie Chrome dla Allegro</p>
+      <h1 id="hero-title">Allegro Flex</h1>
+      <p class="hero-lead">Dostosowuje karty ofert Allegro tak, żeby nazwa sprzedawcy, miniaturki i linki były szybsze w obsłudze podczas codziennych zakupów.</p>
+      <div class="hero-actions" aria-label="Główne akcje">
+        <a class="button primary" href="#install">Zainstaluj lokalnie</a>
+        <a class="button secondary" href="../options.html">Zobacz opcje</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof-strip" aria-label="Najważniejsze informacje">
+    <div>
+      <strong>Manifest V3</strong>
+      <span>Gotowe dla aktualnych wersji Chrome</span>
+    </div>
+    <div>
+      <strong>4 rynki Allegro</strong>
+      <span>PL, COM, SK i CZ</span>
+    </div>
+    <div>
+      <strong>Ustawienia lokalne</strong>
+      <span>Preferencje zapisane w przeglądarce</span>
+    </div>
+  </section>
+
+  <section class="section intro" aria-labelledby="intro-title">
+    <div class="section-copy">
+      <p class="eyebrow">Po co to jest</p>
+      <h2 id="intro-title">Mniej szukania, więcej kontroli nad widokiem oferty.</h2>
+    </div>
+    <p>Allegro Flex nie próbuje przebudować całego serwisu. Skupia się na małych miejscach, które często przeszkadzają: nieklikalnej nazwie sprzedawcy, zbyt długiej kolumnie miniaturek i linkach, które łatwiej rozpoznać po własnym kolorze.</p>
+  </section>
+
+  <section id="features" class="section features" aria-labelledby="features-title">
+    <div class="section-heading">
+      <p class="eyebrow">Funkcje</p>
+      <h2 id="features-title">Usprawnienia, które widać od razu na karcie produktu.</h2>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-icon link-icon" aria-hidden="true"></span>
+        <h3>Link do sprzedawcy</h3>
+        <p>Nazwa sprzedawcy może prowadzić bezpośrednio do profilu lub listy ofert, bez dodatkowego klikania po panelach Allegro.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon color-icon" aria-hidden="true"></span>
+        <h3>Własny kolor linku</h3>
+        <p>Ustaw kolor, który od razu odróżnia dodane linki od pozostałych elementów interfejsu.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon tab-icon" aria-hidden="true"></span>
+        <h3>Nowa karta</h3>
+        <p>Profile sprzedawców mogą otwierać się w nowej karcie, dzięki czemu oferta zostaje pod ręką.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon grid-icon" aria-hidden="true"></span>
+        <h3>Zawijane miniaturki</h3>
+        <p>Galeria produktu może układać miniaturki w wiele wierszy, gdy oferta ma dużo zdjęć.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section experience" aria-labelledby="experience-title">
+    <div class="settings-panel" aria-label="Podglad ustawien">
+      <div class="panel-header">
+        <img src="../images/flex.png" alt="" width="34" height="34">
+        <div>
+          <strong>Opcje Allegro Flex</strong>
+          <span>Przykładowa konfiguracja</span>
+        </div>
+      </div>
+      <div class="setting-row">
+        <span>Nazwa sprzedawcy jako link</span>
+        <span class="switch is-on" aria-hidden="true"></span>
+      </div>
+      <div class="setting-row">
+        <span>Kolor linku</span>
+        <span class="color-swatch" aria-hidden="true"></span>
+      </div>
+      <div class="setting-row">
+        <span>Otwieraj w nowej karcie</span>
+        <span class="switch is-on" aria-hidden="true"></span>
+      </div>
+      <div class="setting-row">
+        <span>Zawijaj miniaturki</span>
+        <span class="switch is-on" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="section-copy">
+      <p class="eyebrow">Konfiguracja</p>
+      <h2 id="experience-title">Panel opcji zostaje prosty, a zmiany trafiają prosto na Allegro.</h2>
+      <p>Rozszerzenie korzysta z zapisanych preferencji przeglądarki. Włącz wybrane funkcje, wybierz kolor i odśwież kartę oferty, aby zobaczyć efekt.</p>
+    </div>
+  </section>
+
+  <section id="install" class="section install" aria-labelledby="install-title">
+    <div class="section-heading">
+      <p class="eyebrow">Instalacja</p>
+      <h2 id="install-title">Uruchomienie w Chrome jako rozszerzenie deweloperskie.</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <span>1</span>
+        <p>Pobierz lub sklonuj repozytorium Allegro Flex na komputer.</p>
+      </li>
+      <li>
+        <span>2</span>
+        <p>Otwórz <code>chrome://extensions/</code> i włącz tryb deweloperski.</p>
+      </li>
+      <li>
+        <span>3</span>
+        <p>Wybierz <strong>Load unpacked</strong> i wskaż folder projektu.</p>
+      </li>
+      <li>
+        <span>4</span>
+        <p>Wejdź na kartę oferty Allegro i dopasuj zachowanie w opcjach rozszerzenia.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="privacy" class="section privacy" aria-labelledby="privacy-title">
+    <div>
+      <p class="eyebrow">Prywatność</p>
+      <h2 id="privacy-title">Minimalny zakres działania.</h2>
+    </div>
+    <p>Allegro Flex działa na stronach Allegro zdefiniowanych w pliku manifestu i zapisuje ustawienia przez API <code>storage</code>. Kod jest lokalny, czytelny i łatwy do sprawdzenia przed załadowaniem rozszerzenia.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>Allegro Flex</span>
+  <a href="../README.md">Dokumentacja</a>
+  <a href="../LICENSE">Licencja</a>
+</footer>
+</body>
+</html>
